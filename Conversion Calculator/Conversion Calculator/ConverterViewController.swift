@@ -38,6 +38,18 @@ class ConverterViewController: UIViewController {
     }
     
     @IBAction func Converter(_ sender: Any) {
+        let options = UIAlertController(title: nil, message: "Choose Converter", preferredStyle: UIAlertController.Style.actionSheet)
+        
+        for convert in conversion{
+            options.addAction(UIAlertAction(title: convert.label, style: UIAlertAction.Style.default, handler: {
+                    (UIAlertAction) -> Void in self.inputDisplay.text = convert.input
+                
+                        self.outputDisplay.text = convert.output
+                
+            }))
+        }
+        
+        self.present(options, animated: true, completion: nil)
     }
     
     /*
