@@ -27,7 +27,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6k-Hv-IIx">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VxE-XL-utd">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VxE-XL-utd" userLabel="Output Display">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
                                                         <color key="backgroundColor" red="0.73423886286724871" green="1" blue="0.97821378607788267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
@@ -40,7 +40,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKi-jj-N55">
                                                 <rect key="frame" x="0.0" y="117" width="414" height="116"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSx-as-bLW">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSx-as-bLW" userLabel="Input Display">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
@@ -75,6 +75,9 @@
                                                         <state key="normal" title="Converter">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="Converter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xi9-yZ-PrI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -234,6 +237,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="inputDisplay" destination="SSx-as-bLW" id="zrm-9l-MwS"/>
+                        <outlet property="outputDisplay" destination="VxE-XL-utd" id="I4e-9q-6ix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
